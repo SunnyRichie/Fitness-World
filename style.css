@@ -1,0 +1,1236 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:"Poppins", sans-serif;
+ 
+}
+
+:root{
+  --orange-color:#ff7200;
+  --white-color:#ffffff;
+  --text-color:#7a7a7a;
+}
+a{
+  text-decoration: none;
+  /* color: var(--white-color); */
+ 
+}
+.firstContainer{
+  height:100vh;
+  margin-bottom: 90px;
+ 
+}
+li{
+  list-style: none;
+}
+body{
+  font-family:"Poppins", sans-serif;
+  
+  
+}
+header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(204, 200, 192, 0.118); 
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  position: fixed;
+  height:80px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+/* .nav-colored{
+  background-color: var(--white-color);
+}
+.nav-transparent{
+background-color: rgba(204, 200, 192, 0.118) ;
+} */
+.ulContainer{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+ 
+}
+.list-bar{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  
+}
+.list-bar li a{
+  padding-right: 25px;
+  color:var(--white-color);
+  transition: 0.5s ease;
+  margin-left: 20px;
+  
+
+
+}
+
+.list-bar li a:hover{
+  color:var(--orange-color);
+}
+.logo{
+  font-size: 27px;
+  font-weight: bolder;
+  color:var(--white-color);
+}
+.studio{
+  font-size: 33px;
+  color:var(--orange-color);
+  font-weight: bolder;
+}
+.signupBtn{
+  padding:12px 17px;
+  color:var(--white-color);
+  background-color: var(--orange-color);
+  border: none;
+  border-radius: 4px;
+  
+  
+}
+.signupBtn a{
+  color:var(--white-color);
+  transition: 0.5s ease;
+}
+.signupBtn:hover{
+  /* opacity: 0.5; */
+  background: transparent;
+  border:1px solid var(--orange-color);
+  
+}
+#sidebarmenu{
+  position:absolute;
+  top:77px;
+  right:0;
+  height:70vh;
+  width:250px;
+  z-index: 999;
+  background-color: rgba(240, 248, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  backdrop-filter: blur(10px);
+  transition:0.5s ease-in-out;
+ 
+  /* display:none; */
+}
+
+
+#sidebarmenu li{
+  width:100%;
+  padding: 20px;
+transition: 0.5s ease;
+border-bottom: 1px solid var(--orange-color);
+
+}
+
+#sidebarmenu li:hover {
+  background-color: var(--orange-color);
+ 
+}
+#sidebarmenu a{
+  width: 100%;
+  color:var(--white-color);
+  text-align: center;
+  
+}
+.fa-solid{
+  font-size: 22px;
+  color:var(--white-color);
+  margin-left: 25px;
+  cursor: pointer;
+ 
+}
+
+#preloader{
+  background: #000 url(images/loader\ grey_style.gif) no-repeat center center;
+  background-size: 15%;
+  height:100vh;
+  width:100%;
+  position: fixed;
+  z-index: 100;
+}
+
+video{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  opacity: 0.8;
+
+}
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgba(35, 45, 57, 0.8);
+ 
+  /* mix-blend-mode: overlay;  */
+}
+.mainText{
+
+
+left:50%;
+top:50%;
+transform: translate(-50%,-50%);
+/* align-items: center;
+justify-content: center;
+height:100vh;
+flex-direction: column; */
+z-index:5;
+position:absolute;
+width:80%;
+text-align: center;
+
+
+
+
+
+}
+.work{
+  color:var(--white-color);
+  font-weight: bolder;
+  margin-bottom: 10px;
+  
+  
+  
+}
+.gym{
+  color:var(--orange-color);
+
+}
+.easy{
+  font-size: 70px;
+  font-weight: 800;
+  color:var(--white-color);
+ 
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.textDiv{
+  text-align: center;
+  
+}
+.secondSection{
+  height:500vh;
+  
+}
+
+.choose{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+
+}
+.program{
+  color:var(--orange-color);
+ 
+}
+.text{
+  
+  line-height: 25px;
+  color: var(--text-color);
+  margin: 30px auto;
+
+ 
+}
+
+
+/* .containerOne{
+ margin-left: 60px;
+ margin-bottom: 70px;
+ display:inline-block;
+ vertical-align: top;
+ 
+  
+ 
+}*/
+/* .divOne{
+  display:inline-block;
+  margin:none;
+  vertical-align: top;
+  
+  /* margin-left: 30px; */
+  /* text-align: -webkit-match-parent; */
+ 
+  .mainContainer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+    gap:1.7rem;
+    margin-top: 6rem;
+    margin-left: 30px; 
+    margin-bottom: 1rem;
+  }
+  .divOne{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 30px;
+    margin-bottom: 2rem; 
+  }
+
+*/
+.containerOne{
+  display:inline-block;
+
+ 
+}
+
+
+.basic{
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.text1{
+ line-height: 20px; 
+ margin-bottom: 8px;
+ color:var(--text-color);
+
+ 
+}
+
+.discover{
+  border:none;
+  /* border-radius: 5px; */
+  /* padding:4px 5px; */
+  cursor:pointer;
+}
+.discover a{
+  color: var(--orange-color);
+  transition: 0.5s ease;
+}
+.discover:hover{
+ 
+  border:1px solid var(--orange-color);
+  background-color: transparent;
+  
+}
+.image{
+  vertical-align: middle;
+  color: var(--orange-color);
+}
+.callToAction{
+  text-align: center;
+  background-image: url(images/cta-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  margin-bottom: 110px;
+}
+.begin{
+  color:var(--white-color);
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.thinktoday{
+  color: var(--orange-color);
+}
+.text2{
+  color:var(--white-color);
+  margin-bottom: 22px;
+}
+.headingBar{
+  /* display:inline-block; */
+  padding-left: 60px;
+  display:inline-block;
+  
+
+  
+
+}
+
+.headings{
+  background-color:var(--white-color);
+  border-radius: 5px;
+  padding:30px 35px;
+  border:1px solid black;
+  vertical-align: top;
+ max-width: 400px;
+  margin-bottom:30px; 
+  border:none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 19px;
+    color: #232d39;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;   
+}
+#myNav {
+  position: relative;
+}
+.show {
+  position: relative;
+}
+.headings:active{
+  color:var(--orange-color);
+}
+.headings img{
+  vertical-align: middle;
+  padding-right: 11px;
+}
+.signup{
+  margin-top: 20px;
+  color:var(--white-color);
+  background-color: var(--orange-color);
+  border:none;
+  border-radius: 2px;
+  padding:25px 30px;
+}
+
+.trainingContainer{
+  margin-left: 30px;
+  vertical-align: top;
+  display:inline-block;
+ 
+ 
+
+}
+.trainingImage{
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.training{
+  margin-bottom: 18px;
+  font-size: 19px;
+}
+.text3{
+  margin-bottom: 20px;
+  color:var(--text-color);
+  line-height: 26px;
+}
+.discover1{
+  color:var(--white-color);
+  background-color: var(--orange-color);
+  padding:15px 20px;
+  border:none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.discover1 a{
+  color:var(--white-color);
+}
+.discover1:hover{
+ opacity:0.7;
+ 
+}
+.signupBtn1{
+  
+  background-color: var(--orange-color);
+  padding:20px 90px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 19px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  
+}
+.signupBtn1 a{
+  color:var(--white-color);
+ 
+}
+.signupBtn1:hover{
+  opacity: 0.7;
+  
+}
+
+.trainingContainer2{
+  display:none;
+
+}
+.trainingContainer3{
+  display:none;
+}
+.trainingContainer4{
+  display:none;
+}
+.scheduleContainer{
+  background-image: url(images/schedule-bg.jpg);
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  margin-top: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  height:155vh;
+ 
+}
+.choose1{
+  color:var(--white-color);
+  font-size:30px ;
+}
+.textt{
+  color:var(--white-color)
+}
+.tableContainer{
+  /* position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%); */
+   
+   /* margin-top:120px; */
+}
+table,tr,td{
+  padding:40px 65px; 
+  border-collapse: collapse;
+  margin:auto;
+  border: 1px solid white;
+  height: 100%;
+  color:var(--white-color);
+  text-align: left;
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+.spanContainer{
+  color:var(--white-color);
+  font-size: 16px;
+  margin-bottom: 50px;
+  transition: 0.5s ease;
+ 
+
+}
+.class1{
+  transition: 0.5s ease;
+  padding-right: 8px;
+  cursor: pointer;
+}
+.class1:hover{
+  color: var(--orange-color);
+}
+.choose2{
+  margin-top: 240px;
+  font-size: 28px;
+}
+.texttt{
+  color: var(--text-color);
+}
+.cardContainer{
+  display:flex;
+  gap:25px;
+    border-radius: 5px;
+    margin-top: 340px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 120px;
+   
+    vertical-align: top;
+  
+}
+
+.card1{
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  /* border:1px solid black; */
+   padding:50px 35px; 
+   line-height: 30px;
+
+}
+.category{
+color:var(--orange-color)
+}
+.trainers{
+margin-bottom: 10px;
+}
+
+.trainingText{
+  color: var(--text-color);
+  /* padding-bottom: 20px; */
+}
+
+.icons{
+  margin-top: 15px;
+ 
+}
+.icons a{
+  padding-right: 10px;
+  color:black;
+  transition: 0.5s ease;
+}
+.icons a:hover{
+  color: var(--orange-color);
+}
+.mapContainer{
+  display: inline-block;
+  /* vertical-align: top; */
+}
+.formContainer{
+  
+  display:inline-block;
+  vertical-align: top;
+  margin: 20px;
+  padding:20px;
+  background-image: url(images/contact-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height:20%;
+  width:48.5%;
+  margin-top: 0;
+
+
+}
+.formBar{
+ background-color: var(--white-color);
+ height:85%;
+ margin:50px;
+ padding-top:31px;
+ padding-bottom:31px;
+ padding-left:31px;
+ border-radius: 10px;
+}
+input{
+  width:45%;
+  padding: 9px 15px;
+margin-right:13px;
+/* margin-left:18px; */
+outline-color: var(--orange-color);
+
+
+  
+}
+.subject{
+  width:93.5%;
+  margin-top:31px;
+  margin-bottom:32px;
+}
+textarea{
+  padding: 7px;
+  height:180px;
+  width:93.5%;
+  outline-color: var(--orange-color);
+border-color: var(--text-color);
+color: var(--text-color);
+margin-bottom: 18px;
+
+}
+
+.footer{
+  text-align: center;
+  color:var(--text-color);
+  margin-top:20px;
+;
+  font-size: 14px;
+}
+.dummyDiv{
+  margin-bottom: 20px;
+}
+
+.signupBtn2{
+margin: 10px 15px;
+}
+ 
+    
+    
+    #sidebar {
+      visibility: hidden;
+      
+    }
+    
+    #closebar {
+      visibility: hidden;
+    }  
+
+   
+    
+    
+  
+
+   @media screen and (max-width:500px) {
+
+.logo{
+  font-size: 35px;
+  color:red;
+}
+#header{
+  background-color: #ff7200;
+}
+    
+    #sidebar {
+      visibility: visible;
+      
+    }
+    
+    #closebar {
+      visibility: visible;
+    }  
+    
+
+} 
+
+
+
+ @media screen and (max-width:600px) {
+    .ulContainer {
+      display: none;
+    
+    } 
+
+     #header {
+      background-color: rgb(91, 16, 16);
+      padding-left:0;
+    }
+    .logo {
+      color: black;
+      font-size: 25px;
+    }
+    .studio{
+      font-size: 25px; 
+    }
+
+    .work{
+      margin-top: 90px;
+        line-height: 10px;
+        margin-bottom: 10px;
+      }
+
+      .signupBtn{
+        margin-top: 0;
+        padding:7px 10px;
+
+
+      }
+      .easy{
+        line-height: 74px;
+        margin-bottom: 8px;
+      }
+
+      .text1{
+max-width:250px;
+      }
+      .callToAction{
+        padding:45px;
+        margin: 25px;
+      }
+      
+      .text2{
+        line-height: 30px;
+        
+      }
+      .trainingImage{
+        max-width: 400px;
+         }
+         .signupBtn1{
+          padding:10px 15px;
+          margin-bottom: 20px;
+         }
+
+         #sidebar {
+          visibility: visible;
+          position: absolute;
+          top: 30px;
+          right: 140px;
+        }
+        
+        #closebar {
+          visibility:visible;
+          position: absolute;
+          top: 30px;
+          right: 140px;
+        } 
+        .text3{
+          max-width: 400px;
+             
+          }
+
+          .scheduleContainer{
+             margin:15px; 
+            padding:5px 10px 10px 10px;
+            
+  
+           
+          }
+          
+          table,tr,td{   
+            padding:5px 5px; 
+            margin-bottom: 0px;
+          
+          }
+.textt{
+  margin-bottom: 22px;
+}
+
+.spanContainer{
+  color:orange;
+  margin-bottom: 20px;
+}
+
+.cardContainer{
+  margin-top:200px;
+  display:block;
+}
+.card1{
+  margin-bottom: 28px;
+ 
+}
+.map{
+  width:420px;
+  border-radius: 10px;
+ 
+}
+.formContainer{
+  width:450px;
+  margin:25px;
+  border-radius: 15px;
+  padding: 0;
+ 
+}
+.chooseBar{
+  margin-top: 250px;
+  ;
+}
+
+.formBar{
+  width:80%;
+}
+
+
+  }
+
+
+
+  
+  @media screen and (max-width:685px) {
+    .list-bar {
+      display: none;
+    }  
+     #header {
+      background-color: #2b2525;
+    }
+    .logo {
+      color: rgb(255, 255, 255);
+    }
+    .easy{
+      line-height: 1.2em;
+    }
+    .mainText {
+      margin-top: 60px;
+      padding-bottom:14.5em;
+      padding-top:7.5em;
+  
+    }
+    
+    #closebar {
+      visibility: visible;
+      position: absolute;
+      top: 30px;}
+      
+    #sidebar {
+      visibility: visible;
+      position: absolute;
+      top: 30px;
+      right: 100px;
+    }
+    
+    
+   
+   .text1{
+    width:16em;
+  }
+ .headingBar{
+  margin-bottom: 26px;
+ }
+ .trainingImage{
+max-width: 500px;
+ }
+ .signupBtn1{
+  padding:10px 15px;
+ }
+.text3{
+max-width: 385px;
+   
+}
+.scheduleContainer{
+  margin-left:5px;
+ 
+}
+
+table,tr,td{
+  
+  padding:30px 10px; 
+  margin-bottom: 0px;
+  
+
+  /* margin:auto; */
+
+}
+
+.chooseBar{
+  margin-top: 0px;
+}
+.choose{
+  font-size: 25px;
+}
+.text{
+  max-width: 438px;
+  
+  font-size: 16px; 
+   margin-left: 30px; 
+   margin: auto;
+  margin-top: 10px;
+ 
+}
+.spanContainer{
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color:orange;
+}
+.choose{
+  margin-top: 75px;
+}
+.texttt{
+  margin-bottom:0;
+}
+.textDiv{
+  margin-bottom: 25px;
+}
+.callToAction{
+  padding:45px;
+  margin: 25px;
+}
+
+.text2{
+  line-height: 30px;
+  
+}
+
+.cardContainer{
+ margin-top: 220px;
+ display: block;
+ margin-bottom: 55px;
+
+ 
+}
+
+.card1{
+  margin-bottom: 35px;
+
+}
+.mapContainer{
+  margin:25px;
+ 
+}
+
+.formContainer{
+  width:100%;
+  margin:25px;
+  border-radius: 15px;
+ 
+} 
+
+}  
+
+
+
+  
+
+
+  
+  @media screen and (max-width:820px) {
+    .ulContainer {
+      display: none;
+    }  
+     #header {
+      background-color: #e59898;
+    }
+    .logo {
+      color: rgb(255, 255, 255);
+    }
+    .easy{
+      line-height: 1.2em;
+    }
+    .mainText {
+      margin-top: 60px;
+      padding-bottom:14.5em;
+      padding-top:7.5em;
+  
+    }
+    
+    #closebar {
+      visibility: visible;
+      position: absolute;
+      top: 30px;
+      right: 180px;
+    }
+      
+    #sidebar {
+      visibility: visible;
+      position: absolute;
+      top: 30px;
+      right: 180px;
+    }
+    
+    
+   
+   .text1{
+    width:35em;
+  }
+ .headingBar{
+  margin-bottom: 26px;
+ }
+ .trainingImage{
+max-width: 550px;
+ }
+ .signupBtn1{
+  padding:10px 15px;
+ }
+.text3{
+max-width: 400px;
+   
+}
+.scheduleContainer{
+  margin-left:5px;
+  padding-top:10px;
+ 
+}
+
+table,tr,td{
+  
+  padding:35px 20px; 
+  margin-bottom: 0px;
+  
+
+  /* margin:auto; */
+
+}
+.chooseBar{
+  margin-top: 160px;
+  margin-bottom: 160px;
+  
+  
+  
+}
+.choose{
+  font-size: 25px;
+}
+.text{
+  max-width: 438px;
+  
+  font-size: 16px; 
+   margin-left: 30px; 
+   margin: auto;
+  margin-top: 10px;
+ 
+}
+.spanContainer{
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color:orange;
+}
+.choose{
+  margin-top: 75px;
+}
+.texttt{
+  margin-bottom:0;
+}
+.textDiv{
+  margin-bottom: 25px;
+}
+.callToAction{
+  padding:45px;
+  margin: 25px;
+}
+
+.text2{
+  line-height: 30px;
+  
+}
+
+.cardContainer{
+ margin-top: 300px;
+ display: block;
+ margin-bottom: 55px;
+
+ 
+}
+
+.trainingText{
+  max-width:100%;
+}
+
+.card1{
+  margin-bottom: 35px;
+  max-width: 720px;
+
+}
+.map{
+  margin:25px;
+  width:720px;
+  border-radius: 15px;
+}
+.formContainer{
+  width:100%;
+  margin:25px;
+  border-radius: 15px;
+ 
+} 
+
+}  
+
+@media screen and (max-width:900px) {
+  .ulContainer {
+    display: none;
+  }  
+   #header {
+    background-color: #4e0404;
+  }
+  .logo {
+    color: rgb(255, 255, 255);
+  }
+  .easy{
+    line-height: 1.2em;
+  }
+  .mainText {
+    margin-top: 60px;
+    padding-bottom:14.5em;
+    padding-top:7.5em;
+
+  }
+  
+  #closebar {
+    visibility: hidden;
+    position: absolute;
+    top: 30px;
+    right: 210px;
+  }
+    
+  #sidebar {
+    visibility: visible;
+    position: absolute;
+    top: 30px;
+    right: 210px;
+  }
+  
+  
+ 
+ .text1{
+  width:41em;
+}
+.headingBar{
+margin-bottom: 26px;
+}
+.trainingImage{
+max-width: 550px;
+}
+.signupBtn1{
+padding:10px 15px;
+}
+.text3{
+max-width: 400px;
+ 
+}
+.scheduleContainer{
+margin-left:5px;
+padding-top:10px;
+
+}
+
+table,tr,td{
+
+padding:40px 25px; 
+margin-bottom: 0px;
+
+
+/* margin:auto; */
+
+}
+.chooseBar{
+margin-top: 160px;
+margin-bottom: 160px;
+
+
+
+}
+.choose{
+font-size: 25px;
+}
+.text{
+max-width: 438px;
+
+font-size: 16px; 
+ margin-left: 30px; 
+ margin: auto;
+margin-top: 10px;
+
+}
+.spanContainer{
+margin-bottom: 25px;
+margin-top: 25px;
+color:orange;
+}
+.choose{
+margin-top: 75px;
+}
+.texttt{
+margin-bottom:0;
+}
+.textDiv{
+margin-bottom: 25px;
+}
+.callToAction{
+padding:45px;
+margin: 25px;
+}
+
+.text2{
+line-height: 30px;
+
+}
+
+.cardContainer{
+margin-top: 300px;
+display: block;
+margin-bottom: 55px;
+
+
+}
+
+.trainingText{
+max-width:100%;
+}
+
+.card1{
+margin-bottom: 35px;
+max-width: 720px;
+
+}
+.map{
+margin:25px;
+width:720px;
+border-radius: 15px;
+}
+.formContainer{
+width:100%;
+margin:25px;
+border-radius: 15px;
+
+} 
+
+}  
+
+
+   
+   
+
