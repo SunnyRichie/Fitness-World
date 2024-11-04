@@ -44,6 +44,14 @@ header{
   padding-left: 80px;
   padding-right: 80px;
 }
+
+header {
+  transition: background-color 0.3s ease;
+}
+
+header.sticky {
+  background-color: rgba(44, 39, 39, 0.9); /* Change as needed */
+}
 /* .nav-colored{
   background-color: var(--white-color);
 }

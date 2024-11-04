@@ -1,197 +1,106 @@
-const heading1= document.getElementById('head1')
-const body = document.querySelector('body')
-const heading2= document.getElementById('head2')
-const heading3= document.getElementById('head3')
-const heading4= document.getElementById('head4')
-const trainingContainer1= document.getElementById('training1')
-const trainingContainer2= document.getElementById('training2')
-const trainingContainer3= document.getElementById('training3')
-const trainingContainer4= document.getElementById('training4')
-const monday = document.getElementById('monday')
-const tuesday = document.getElementById('tuesday')
-const wednesday = document.getElementById('wednesday')
-const thursday = document.getElementById('thursday')
-const friday = document.getElementById('friday')
+// Select all necessary elements
+const elements = {
+  headings: [
+    document.getElementById('head1'),
+    document.getElementById('head2'),
+    document.getElementById('head3'),
+    document.getElementById('head4')
+  ],
+  trainingContainers: [
+    document.getElementById('training1'),
+    document.getElementById('training2'),
+    document.getElementById('training3'),
+    document.getElementById('training4')
+  ],
+  days: {
+    monday: document.getElementById('monday'),
+    tuesday: document.getElementById('tuesday'),
+    wednesday: document.getElementById('wednesday'),
+    thursday: document.getElementById('thursday'),
+    friday: document.getElementById('friday')
+  },
+  timeSlots: {
+    r1: [document.getElementById('r1time1'), document.getElementById('r1time2')],
+    r2: [document.getElementById('r2time1'), document.getElementById('r2time2')],
+    r3: [document.getElementById('r3time1'), document.getElementById('r3time2')],
+    r4: [document.getElementById('r4time1'), document.getElementById('r4time2')],
+    r5: [document.getElementById('r5time1'), document.getElementById('r5time2')]
+  },
+  sidebar: {
+    menu: document.getElementById('sidebarmenu'),
+    sidebar: document.getElementById('sidebar'),
+    closebar: document.getElementById('closebar')
+  },
+  header: document.getElementById('header')
+};
 
-const r1time1 = document.getElementById('r1time1')
-const r1time2 = document.getElementById('r1time2')
-const r2time1 = document.getElementById('r2time1')
-const r2time2 = document.getElementById('r2time2')
-const r3time1 = document.getElementById('r3time1')
-const r3time2 = document.getElementById('r3time2')
-const r4time1 = document.getElementById('r4time1')
-const r4time2 = document.getElementById('r4time2')
-const r5time1 = document.getElementById('r5time1')
-const r5time2 = document.getElementById('r5time2')
-const sidebarmenu = document.getElementById('sidebarmenu')
-const sidebar = document.getElementById('sidebar')
-const closebar = document.getElementById('closebar')
-const header = document.getElementById('header')
- 
-
-
-// headings2.onclick = function(){
-//   heading3.textContent='hello'
-//   document.body.style.backgroundColor='red';
-// }
-monday.addEventListener('click',function(){
-r4time1.textContent='';
-r5time2.textContent='';
-r2time2.textContent='';
-r5time1.textContent='';
-r2time1.textContent='';
-r4time2.textContent='';
-r1time2.textContent='';
-r3time1.textContent='';
-
-  r1time1.textContent='10:00AM - 11:30AM';
-r3time2.textContent='2:00PM - 3:30PM';
-
-}
-)
-tuesday.addEventListener('click',function(){
-r1time1.textContent='';
-r3time2.textContent ='';
-r4time1.textContent='';
-r5time2.textContent='';
-r2time2.textContent='';
-r5time1.textContent='';
-r2time1.textContent='';
-r4time2.textContent='';
-
-  r1time2.textContent='2:00PM - 3:30PM';
-r3time1.textContent='10:00AM - 11:30AM';
-
-}
-)
-wednesday.addEventListener('click',function(){
-r1time2.textContent='';
-r3time1.textContent='';
-r1time1.textContent='';
-r3time2.textContent ='';
-r2time2.textContent='';
-r5time1.textContent='';
-r2time1.textContent='';
-r4time2.textContent='';
-  
-r4time1.textContent='10:00AM - 11:30AM';
-r5time2.textContent='2:00PM - 3:30PM';
-
-}
-)
-
-thursday.addEventListener('click',function(){
-r4time1.textContent='';
-r5time2.textContent='';
-r1time2.textContent='';
-r3time1.textContent='';
-r1time1.textContent='';
-r3time2.textContent ='';
-r2time1.textContent='';
-r4time2.textContent='';
-  
-  
-  r2time2.textContent='2:00PM - 3:30PM';
-r5time1.textContent='10:00AM - 11:30AM';
-
-}
-)
-friday.addEventListener('click',function(){
-  r2time2.textContent='';
-  r5time1.textContent='';
-r4time1.textContent='';
-r5time2.textContent='';
-r1time2.textContent='';
-r3time1.textContent='';
-r1time1.textContent='';
-r3time2.textContent ='';
-
-  
-r2time1.textContent='2:00PM - 3:30PM';
-r4time2.textContent='10:00AM - 11:30AM';
-
-}
-)
-
-head1.addEventListener('click',function(){
-training4.style.display='none';
-training2.style.display ='none';
-training3.style.display ='none';
-training1.style.display ='inline-block';
-head1.style.active.color='#ff7200'
-
-     
-})
-
-head2.addEventListener('click',function(){
-training1.style.display='none';
-training4.style.display='none';
-training3.style.display ='none';
-training2.style.display ='inline-block';
-
-
-    
-})
-head3.addEventListener('click',function(){
-training2.style.display='none';
-training1.style.display='none';
-training4.style.display='none';
-
-training3.style.display ='inline-block';
-
-
-    
-})
-head4.addEventListener('click',function(){
-training3.style.display='none';
-training2.style.display='none';
-training1.style.display='none';
-
-training4.style.display ='inline-block';
-
-    
-})
-
-// sidebar.addEventListener('click', function(){
-//   sidebarmenu.style.display = 'flex'
-//   sidebar.style.active='green'
-  
-// })
-
-function showSideBar(){
-  sidebarmenu.style.display='flex';
-  closebar.style.visibility ='visible';
-  sidebar.style.visibility= 'hidden'
-  
-
+// Function to reset time slots
+function resetTimeSlots() {
+  for (const timeSlot in elements.timeSlots) {
+    elements.timeSlots[timeSlot].forEach(slot => slot.textContent = '');
+  }
 }
 
-function closeSideBar(){
- sidebarmenu.style.visibility='hidden';
-  sidebar.style.visibility='visible';
-  closebar.style.visibility ='hidden';
-  
+// Event listeners for days
+const dayEventListeners = {
+  monday: () => {
+    resetTimeSlots();
+    elements.timeSlots.r1[0].textContent = '10:00AM - 11:30AM';
+    elements.timeSlots.r3[1].textContent = '2:00PM - 3:30PM';
+  },
+  tuesday: () => {
+    resetTimeSlots();
+    elements.timeSlots.r1[1].textContent = '2:00PM - 3:30PM';
+    elements.timeSlots.r3[0].textContent = '10:00AM - 11:30AM';
+  },
+  wednesday: () => {
+    resetTimeSlots();
+    elements.timeSlots.r4[0].textContent = '10:00AM - 11:30AM';
+    elements.timeSlots.r5[1].textContent = '2:00PM - 3:30PM';
+  },
+  thursday: () => {
+    resetTimeSlots();
+    elements.timeSlots.r5[0].textContent = '10:00AM - 11:30AM';
+    elements.timeSlots.r2[1].textContent = '2:00PM - 3:30PM';
+  },
+  friday: () => {
+    resetTimeSlots();
+    elements.timeSlots.r2[1].textContent = '2:00PM - 3:30PM';
+    elements.timeSlots.r4[1].textContent = '10:00AM - 11:30AM';
+  }
+};
+
+// Attach event listeners to day buttons
+for (const [day, handler] of Object.entries(dayEventListeners)) {
+  elements.days[day].addEventListener('click', handler);
 }
 
-
-window.addEventListener('scroll', function(){
-  header.classList.toggle('sticky', window.scrollY>7);
+// Function to display training sections
+function displayTrainingSection(index) {
+  elements.trainingContainers.forEach((container, idx) => {
+    container.style.display = idx === index ? 'inline-block' : 'none';
+  });
 }
 
-)
+// Attach event listeners to heading buttons
+elements.headings.forEach((heading, index) => {
+  heading.addEventListener('click', () => displayTrainingSection(index));
+});
 
-// const nav = document.getElementById('myNav');
-// window.onscroll= function(){
-//   if(document.body.scrollTop >=200){
-//     myNav.classList.add('nav-colored');
-//     myNav.classList.remove('nav-transparent');
+// Sidebar functions
+function showSideBar() {
+  elements.sidebar.menu.style.display = 'flex';
+  elements.sidebar.closebar.style.visibility = 'visible';
+  elements.sidebar.sidebar.style.visibility = 'hidden';
+}
 
-//   }
-//   else{
-//     myNav.classList.add('nav-transparent');
-//     myNav.classList.remove('nav-colored');
-//   }
-// }
+function closeSideBar() {
+  elements.sidebar.menu.style.visibility = 'hidden';
+  elements.sidebar.sidebar.style.visibility = 'visible';
+  elements.sidebar.closebar.style.visibility = 'hidden';
+}
 
-
-// )
+// Sticky navbar on scroll
+window.addEventListener('scroll', () => {
+  elements.header.classList.toggle('sticky', window.scrollY > 7);
+});
